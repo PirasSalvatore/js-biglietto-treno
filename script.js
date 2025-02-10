@@ -1,19 +1,29 @@
 /* data user*/
 
-const distance = prompt("quanti km vuoi fare?");
+let distance;
 
-if (distance <= 0) {
-    alert("inserito numero non corretto");
-}
+do {
+    distance = prompt("quanti km vuoi fare?");
 
-const age = Number(prompt("inserisci la tua età"));
+    if (distance <= 0) {
+        alert("inserito numero non corretto");
+    }
 
-if (age < 6) {
-    alert("sei troppo piccolo per viaggiare da solo");
+} while (distance <= 0);
 
-} else if (age > 100) {
-    alert("non sarai un pò troppo grande per i canoni umani????");
-}
+let age;
+
+do {
+    age = Number(prompt("inserisci la tua età"));
+
+    if (age < 6) {
+        alert("sei troppo piccolo per viaggiare da solo");
+
+    } else if (age > 100) {
+        alert("non sarai un pò troppo grande per i canoni umani????");
+    }
+
+} while (age < 6 || age > 100);
 
 /* calculation pince */
 
